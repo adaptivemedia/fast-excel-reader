@@ -1,5 +1,5 @@
 {
-    "name": "avadim/fast-excel-reader",
+    "name": "adaptivemedia/fast-excel-reader",
     "description": "Lightweight and very fast XLSX Excel Spreadsheet Reader in PHP",
     "keywords": [
         "php",
