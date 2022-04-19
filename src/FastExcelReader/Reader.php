@@ -29,10 +29,10 @@ class Reader extends \XMLReader
      * @param int $options
      * @return bool
      */
-    public function open($innerFile, $encoding = null, $options = 0)
+    public function openInner($innerFile, $encoding = null, $options = 0)
     {
         $this->innerFile = $innerFile;
-        return parent::open('zip://' . $this->zipFile . '#' . $innerFile, $encoding, $options);
+        return self::open('zip://' . $this->zipFile . '#' . $innerFile, $encoding, $options);
     }
 
     /**
@@ -42,7 +42,7 @@ class Reader extends \XMLReader
     {
         if ($this->innerFile) {
             $this->innerFile = null;
-            return parent::close();
+            return self::close();
         }
         return true;
     }
